@@ -8,7 +8,58 @@ namespace study
 
         static void Main(string[] args)
         {
+            //事件
+            EventExample.Usage();
 
+
+            #region  其他类成员
+            //构造函数
+            MyList<string> list1 = new MyList<string>();
+            MyList<string> list2 = new MyList<string>(10);
+            //属性
+            MyList<string> names = new MyList<string>();
+            names.Capacity = 100;   // Invokes set accessor
+            int i = names.Count;    // Invokes get accessor
+            int j = names.Capacity; // Invokes get accessor
+            //索引器
+            MyList<string> names1 = new MyList<string>();
+            names1.Add("Liz");
+            names1.Add("Martha");
+            names1.Add("Beth");
+            for (int k = 0; i < names1.Count; k++)
+            {
+                string s = names1[i];
+                names1[k] = s.ToUpper();
+            }
+            //事件
+            //    class EventExample
+            //{
+            //    static int changeCount;
+            //    static void ListChanged(object sender, EventArgs e)
+            //    {
+            //        changeCount++;
+            //    }
+            //    public static void Usage()
+            //    {
+            //        MyList<string> names = new MyList<string>();
+            //        names.Changed += new EventHandler(ListChanged);
+            //        names.Add("Liz");
+            //        names.Add("Martha");
+            //        names.Add("Beth");
+            //        Console.WriteLine(changeCount);     // Outputs "3"
+            //    }
+            //}
+            //运算符
+            MyList<int> a = new MyList<int>();
+            a.Add(1);
+            a.Add(2);
+            MyList<int> b = new MyList<int>();
+            b.Add(1);
+            b.Add(2);
+            Console.WriteLine(a == b);  // Outputs "True"
+            b.Add(3);
+            Console.WriteLine(a == b);  // Outputs "False"
+            #endregion
 
 
 
@@ -87,7 +138,7 @@ namespace study
 
             //Console.WriteLine(account.GetAccountHistory());
             #endregion
-            #endregion 
+            #endregion
         }
         //异常返回判断方法
         private static bool LogException(Exception e)
