@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using static System.Console;
+//#nullable enable
+
 namespace study
 {
     //此项目计划严格按照MSDN的顺序编写 
@@ -224,6 +226,50 @@ namespace study
             #endregion
             #endregion
             #region 概念
+            #region 类型系统
+            #endregion
+            #region 可为空应用类型
+            // 用于更好的表明变量意图，在和数据库交互式有用
+            //引用可为 null。 将引用类型变量初始化为 null 或稍后将其指定为 null 时，编译器不会发出警告。 在没有进行 null 检查的情况下取消引用这些变量，编译器会发出警告。
+            //假定引用不为 null。 当引用类型被取消引用时，编译器不会发出任何警告。 如果将变量设置为可以为 null 的表达式，则编译器会发出警告。
+            //#nullable enable//启用null警告
+            //string s = null;
+            #endregion
+            #region  选择可为空引用的策略
+            //主要将现有项目工程上如何调整为可为空引用，意义不大
+            //指示不可为 null 属性未进行初始化警告的解决方案,此时FirstName，LastName在赋值之前看不到null值
+            //[Required]
+            //public string FirstName { get; set; } = null!;
+
+            //[Required]
+            //public string LastName { get; set; } = null!;
+
+            //public string? VehicleRegistration { get; set; }
+            #endregion
+            #region 命名空间
+            //它们组织大型代码项目。
+            //通过使用.运算符分隔它们。
+            //using 指令可免去为每个类指定命名空间的名称。
+            //global 命名空间是“根”命名空间：global::System 始终引用 .NET System 命名空间。
+            #endregion
+            #region 基本类型
+
+            #endregion
+            #region 类
+            #endregion
+            #region 析构元组和其他类型
+            //元组可自定义Deconstruct方法析构
+            #endregion
+            #region 接口
+            //接口可以模拟类的多重继承，C#类只能继承单个类
+            //接口可以模拟结构的继承，结构无法继承
+            //接口通常类似于只有抽象成员的抽象基类。 实现接口的任何类或结构都必须实现其所有成员。 接口可以选择性地定义其部分或全部成员的默认实现。 有关详细信息，请参阅默认接口方法。
+            //接口无法直接进行实例化。 其成员由实现接口的任何类或结构来实现。
+            //一个类或结构可以实现多个接口。 一个类可以继承一个基类，还可实现一个或多个接口。
+            #endregion
+            #region 方法
+            //
+            #endregion
             #endregion
 
 
